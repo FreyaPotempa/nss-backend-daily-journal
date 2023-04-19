@@ -8,7 +8,7 @@ export const Entry = ({
 }) => {
   const getMessageType = () => {
     if (mood) {
-      switch (mood.label) {
+      switch (mood.mood) {
         case "Bemoaned":
           return "is-danger";
         case "Ecstatic":
@@ -32,7 +32,7 @@ export const Entry = ({
         <p className="entry__concept">{entry.concept}</p>
         <p className="entry__entry">{entry.entry}</p>
         <p className="entry__date">{entry.date}</p>
-        <p className="entry__mood">{mood?.label}</p>
+        <p className="entry__mood">{entry.mood.mood}</p>
         <div className="buttons">
           <button
             className={`button ${getMessageType()} is-outlined`}
